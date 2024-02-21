@@ -1,5 +1,6 @@
 import time
 import logging
+import sys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium import webdriver

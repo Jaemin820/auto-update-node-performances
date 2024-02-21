@@ -28,4 +28,3 @@ def get_bera_testnet_validator_performance(url):
         return bera_performance_info
     except Exception as e:
         logging.error(f'Error getting bera testnet validator performance information: {e}')
-        sys.exit(1)

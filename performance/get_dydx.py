@@ -23,7 +23,6 @@ def get_dydx_mainnet_validator_performance(url):
         return dydx_mainnet_performance_info
     except Exception as e:
         logging.error(f'Error getting dydx mainnet validator performance information: {e}')
-        sys.exit(1)
 
 def get_dydx_testnet_validator_performance(url):
     logging.info('Getting dydx testnet validator performance information')
@@ -43,4 +42,3 @@ def get_dydx_testnet_validator_performance(url):
         return dydx_testnet_performance_info
     except Exception as e:
         logging.error(f'Error getting dydx testnet validator performance information: {e}')
-        sys.exit(1)
