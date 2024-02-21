@@ -6,7 +6,7 @@ from performance.get_eth import get_eth_ssv_validator_performance
 from performance.get_dydx import get_dydx_mainnet_validator_performance, \
     get_dydx_testnet_validator_performance
 
-import logging
+import logging, sys
 
 class Update:
     # Performance 
@@ -100,5 +100,6 @@ class Update:
                 nodes_performance_content_update(key, content)
         except Exception as e:
             logging.error(f'Error updating Notion performance content: {e}')
+            sys.exit(1)
 
 
