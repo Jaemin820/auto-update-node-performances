@@ -1,4 +1,5 @@
 from update import Update
+import sys
 import logging
 
 # 로깅 설정
@@ -15,6 +16,7 @@ def main():
         Update()
     except Exception as e:
         print(e)
+        sys.exit()
 
 if __name__ == '__main__':
     main()

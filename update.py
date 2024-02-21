@@ -87,7 +87,7 @@ class Update:
                         performance =  f"Performance 24H: {value['performance']['Performance']}"
                         ranking = ""
                     else:
-                        performance = f"Uptime: {value['performance']['Uptime']}\nVoting Power: {value['performance']['Voting_Power']}\nCommission: {value['performance']['Commission']}"
+                        performance = f"Uptime: {value[' performance']['Uptime']}\nVoting Power: {value['performance']['Voting_Power']}\nCommission: {value['performance']['Commission']}"
                         ranking = value['performance']['Ranking']
 
                 else:
