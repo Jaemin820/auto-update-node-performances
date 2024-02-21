@@ -1,11 +1,8 @@
 import time
-import logging
-import sys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 
-logging.info('Config selenuim chrom options')
 # Chrome 옵션 설정
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Headless 모드 활성화
