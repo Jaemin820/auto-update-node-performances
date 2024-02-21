@@ -86,7 +86,6 @@ class Update:
             for key, value in self.nodes.items():
                 if key in list(self.performance_functions.keys()):
                     if key == "eth-ssv-validator":
-                        print(value)
                         performance =  f"Performance 24H: {value['performance']['Performance']}"
                         ranking = ""
                     else:
