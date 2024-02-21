@@ -1,5 +1,6 @@
 from utils import get_drive_values
 import logging
+import sys
 
 def get_eth_ssv_validator_performance(url):
     logging.info('Getting eth ssv validator performance information')
@@ -11,3 +12,4 @@ def get_eth_ssv_validator_performance(url):
         return eth_ssv_validater_performance_info
     except Exception as e:
         logging.error(f'Error getting eth ssv validator performance information: {e}')
+        sys.exit(1)

@@ -6,7 +6,8 @@ from performance.get_eth import get_eth_ssv_validator_performance
 from performance.get_dydx import get_dydx_mainnet_validator_performance, \
     get_dydx_testnet_validator_performance
 
-import logging, sys
+import logging
+import sys
 
 class Update:
     # Performance 
@@ -47,6 +48,7 @@ class Update:
             logging.info('Nodes information successfully fetched.')
         except Exception as e:
             logging.error(f'Error fetching nodes information: {e}')
+            sys.exit(1)
     
     def get_nodes_performance(self):
         logging.info('Fetching nodes performance.')
@@ -60,6 +62,7 @@ class Update:
             logging.info('Nodes performance successfully fetched and updated.')
         except Exception as e:
             logging.error(f'Error fetching nodes performance: {e}')
+            sys.exit(1)
     
     # def get_notion_performance_content(self):
     #     for key, value in self.nodes.items():
@@ -87,7 +90,7 @@ class Update:
                         performance =  f"Performance 24H: {value['performance']['Performance']}"
                         ranking = ""
                     else:
-                        performance = f"Uptime: {value[' performance']['Uptime']}\nVoting Power: {value['performance']['Voting_Power']}\nCommission: {value['performance']['Commission']}"
+                        performance = f"Uptime: {value['performance']['Uptime']}\nVoting Power: {value['performance']['Voting_Power']}\nCommission: {value['performance']['Commission']}"
                         ranking = value['performance']['Ranking']
 
                 else:

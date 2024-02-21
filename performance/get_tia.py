@@ -1,5 +1,6 @@
 from utils import get_drive_values
 import logging
+import sys
 
 def get_celestia_testnet_validator_performance(url):
     logging.info('Getting celestia testnet validator performance information')
@@ -34,5 +35,6 @@ def get_celestia_testnet_validator_performance(url):
         return dict(tia_performance_info)
     except Exception as e:
         logging.error(f'Error getting celestia testnet validator performance information: {e}')
+        sys.exit(1)
 
     

@@ -1,5 +1,6 @@
 from utils import get_drive_values
 import logging
+import sys
 
 def get_bera_testnet_validator_performance(url):
     logging.info('Getting bera testnet validator performance information')
@@ -26,4 +27,5 @@ def get_bera_testnet_validator_performance(url):
         logging.info('Bera testnet validator performance information successfully geted.')
         return bera_performance_info
     except Exception as e:
-        logging.error(f'Error getting bera testnet validator performance information: {e}')    
+        logging.error(f'Error getting bera testnet validator performance information: {e}')
+        sys.exit(1)

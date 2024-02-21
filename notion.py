@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 from notion_client import Client
 import requests
 import os
-
+import sys
 import logging
 
 load_dotenv()
@@ -26,6 +26,7 @@ def get_child_page_info():
         return child_page_info
     except Exception as e:
         logging.error(f'Error getting child page information: {e}')
+        sys.exit(1)
 
 
 def nodes_info():
@@ -41,6 +42,7 @@ def nodes_info():
         return my_dict
     except Exception as e:
         logging.error(f'Error getting nodes information: {e}')
+        sys.exit(1)
 
 def nodes_performance_info(node_name):
     logging.info('Getting nodes performance information')
@@ -64,6 +66,7 @@ def nodes_performance_info(node_name):
         return data_dict
     except Exception as e:
         logging.error(f'Error getting nodes performance information: {e}')
+        sys.exit(1)
 
 def nodes_performance_content_update(node_name, content):
     logging.info('Updating nodes performance notion content')
@@ -103,5 +106,6 @@ def nodes_performance_content_update(node_name, content):
             print("No pages found with the specified condition.")
     except Exception as e:
         logging.error(f'Error updating nodes performance notion content: {e}')
+        sys.exit(1)
 
     
