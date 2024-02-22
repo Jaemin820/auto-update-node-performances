@@ -5,7 +5,7 @@ import sys
 def get_celestia_testnet_validator_performance(url):
     logging.info('Getting celestia testnet validator performance information')
     try:
-        performance_value_list = get_drive_values(url, 5, "ValidatorInfo_rank__d1s55", "ValidatorInfo_infoCard__1dw-p")
+        performance_value_list = get_drive_values(url, "ValidatorInfo_rank__d1s55", "ValidatorInfo_infoCard__1dw-p")
         ranking = performance_value_list['ValidatorInfo_rank__d1s55'][0]
         value_list = performance_value_list['ValidatorInfo_infoCard__1dw-p'][0]
         lines = value_list.split('\n')

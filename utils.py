@@ -11,8 +11,8 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 
 # 크롬드라이버 실행
 driver = webdriver.Chrome(options=chrome_options)
-
-def get_drive_values(url, times, *class_name):
+times=20
+def get_drive_values(url, *class_name):
     driver.get(url)
     time.sleep(times)
     if len(class_name) > 1:
